@@ -210,7 +210,22 @@ const builds = {
     dest: resolve('packages/weex-template-compiler/build.js'),
     format: 'cjs',
     external: Object.keys(require('../packages/weex-template-compiler/package.json').dependencies)
-  }
+  },
+  // Weex runtime factory
+  'remote-factory': {
+    weex: true,
+    entry: resolve('remote/entry-runtime-factory.js'),
+    dest: resolve('packages/vue-remote-render/factory.js'),
+    format: 'cjs',
+    plugins: [weexFactoryPlugin]
+  },
+  // Weex runtime framework (CommonJS).
+  'remote-framework': {
+    weex: true,
+    entry: resolve('remote/entry-framework.js'),
+    dest: resolve('packages/vue-remote-render/index.js'),
+    format: 'cjs'
+  },
 }
 
 function genConfig (name) {

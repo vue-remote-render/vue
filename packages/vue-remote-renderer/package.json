@@ -1,0 +1,11 @@
+{
+  "name": "vue-remote-renderer",
+  "version": "0.0.1",
+  "description": "vue-remote-renderer",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vue.git"
+  },
+  "license": "MIT"
+}
